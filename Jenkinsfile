@@ -25,7 +25,7 @@ stage ('Check-Git-Secrets') {
     steps {
          sh 'rm owasp* || true'
          sh 'wget "https://raw.githubusercontent.com/cehkunal/webapp/master/owasp-dependency-check.sh" '
-         sh 'chmod +x owasp-dependency-check.sh'
+         sh 'chmod -R 777 owasp-dependency-check.sh'
          sh 'bash owasp-dependency-check.sh'
          sh 'cat /var/lib/jenkins/OWASP-Dependency-Check/reports/dependency-check-report.xml'
         
