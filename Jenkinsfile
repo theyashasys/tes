@@ -21,16 +21,16 @@ stage ('Check-Git-Secrets') {
      }
     }
     
-  //stage ('Source Composition Analysis') {
-    //steps {
-      //   sh 'rm owasp* || true'
-        // sh 'wget "https://raw.githubusercontent.com/cehkunal/webapp/master/owasp-dependency-check.sh" '
-         //sh 'chmod -R 777 owasp-dependency-check.sh'
-         //sh 'bash owasp-dependency-check.sh'
-         //sh 'cat /var/lib/jenkins/OWASP-Dependency-Check/reports/dependency-check-report.xml'
+  stage ('Source Composition Analysis') {
+    steps {
+         sh 'rm owasp* || true'
+         sh 'wget "https://raw.githubusercontent.com/cehkunal/webapp/master/owasp-dependency-check.sh" '
+         sh 'chmod -R 777 owasp-dependency-check.sh'
+         sh 'bash owasp-dependency-check.sh'
+         sh 'cat /var/lib/jenkins/OWASP-Dependency-Check/reports/dependency-check-report.xml'
         
-      //}
-    //}
+      }
+    }
     
     stage ('JAVA') {
     steps{
@@ -56,7 +56,7 @@ stage ('Check-Git-Secrets') {
     stage ('Deploy-To-Tomcat') {
             steps {
            sshagent(['tomcat']) {
-                sh 'scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/GITpipe/target/WebApp.war justdial@172.29.87.55:/opt/tomcat/webapps/webapp.war'
+                sh 'scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/Bwaap/target/app-1.0-SNAPSHOT.war justdial@172.29.87.55:/opt/tomcat/webapps/webapp.war'
               }      
            }       
     }
