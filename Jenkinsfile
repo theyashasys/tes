@@ -24,9 +24,9 @@ stage ('Check-Git-Secrets') {
   stage ('Source Composition Analysis') {
     steps {
          sh 'rm owasp* || true'
-         sh 'cd /home/justdial wget "https://raw.githubusercontent.com/cehkunal/webapp/master/owasp-dependency-check.sh" '
-         sh 'chmod -R 777 /home/justdial/owasp-dependency-check.sh'
-         sh 'bash /home/justdial/owasp-dependency-check.sh'
+         sh 'cd /home/justdial && wget "https://raw.githubusercontent.com/cehkunal/webapp/master/owasp-dependency-check.sh" '
+         sh 'cd /home/justdial && chmod -R 777 /owasp-dependency-check.sh'
+         sh 'cd /home/justdial && bash owasp-dependency-check.sh'
          sh 'cat /var/lib/jenkins/OWASP-Dependency-Check/reports/dependency-check-report.xml'
         
       }
