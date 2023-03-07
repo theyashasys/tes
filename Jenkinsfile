@@ -57,6 +57,9 @@ stage ('Check-Git-Secrets') {
     stage ('Deploy-To-Tomcat') {
             steps {
            sshagent(['tomcat']) {
+                sshagent(['17f2ec7b-a3b4-4fc6-9f4c-8c878a614f91']) {
+                    // some block
+                }
                 sh 'scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/Bwaap/target/app-1.0-SNAPSHOT.war justdial@172.29.87.55:/opt/tomcat/webapps/webapp.war'
               }      
            }       
