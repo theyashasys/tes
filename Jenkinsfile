@@ -55,7 +55,7 @@ stage ('Check-Git-Secrets') {
     stage ('Deploy-To-Tomcat') {
             steps {
            sshagent(['SSH-87.55-PRIVATE']) {
-                sh 'cp /var/lib/jenkins/workspace/Bwaap/target/Webapp.war /opt/tomcat/webapps/'
+                sh 'sudo cp /var/lib/jenkins/workspace/Bwaap/target/Webapp.war /opt/tomcat/webapps/'
               }      
            }       
     }
