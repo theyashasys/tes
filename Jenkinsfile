@@ -41,10 +41,8 @@ stage ('Check-Git-Secrets') {
     
     stage ('SAST') {
       steps {
-        withSonarQubeEnv(‘SonarQubeToken’) {
           bat  ' mvn sonar:sonar '
           sh 'cat target/sonar/report-task.txt'
-        }
       }
     }
     
