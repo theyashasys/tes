@@ -16,7 +16,7 @@
     </dependency>
   </dependencies>
   <build>
-    <finalName>Bwaap</finalName>
+    <finalName>Bwaap1</finalName>
     <plugins>
   <plugin>
    <groupId>org.apache.maven.plugins</groupId>
