@@ -41,7 +41,7 @@ stage ('Check-Git-Secrets') {
     
     stage ('SAST') {
       steps {
-          bat  ' mvn sonar:sonar '
+          sh ' mvn sonar:sonar '
           sh 'cat target/sonar/report-task.txt'
       }
     }
