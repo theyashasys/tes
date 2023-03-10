@@ -55,7 +55,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
                              <goal>copy</goal>
                           </goals>
                           <configuration>
-                               <outputDirectory>${endorsed.dir}</outputDirectory>
+                               <outputDirectory>${project.build.outputDirectory}/config/${item}/</outputDirectory>
                                <silent>true</silent>
                                <artifactItems>
                                    <artifactItem>
@@ -63,6 +63,13 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
                                        <artifactId>javaee-api</artifactId>
                                        <version>${jakartaee}</version>
                                        <type>jar</type>
+                                       <resources>
+                                           <resource>                                               
+                                               <directory>${project.build.outputDirectory}</directory>
+                                               <filtering>false</filtering>
+                                               <include>*.properties</include>
+                                           </resource>
+                                       </resources>
                                    </artifactItem>
                                </artifactItems>
                            </configuration>
