@@ -55,7 +55,7 @@ stage ('Check-Git-Secrets') {
     stage ('Deploy-To-Tomcat') {
             steps {
            sshagent(['SSH-87.55-PRIVATE']) {
-                sh 'sudo cp /var/lib/jenkins/workspace/Bwaap/target/Webapp.war /opt/tomcat/webapps/'
+                sh 'scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/GITpipe/target/WebApp.war justdial@172.29.87.55:/opt/tomcat/webapps/webapp.war'
               }      
            }       
     }
