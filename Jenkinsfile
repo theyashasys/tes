@@ -42,7 +42,6 @@ stage ('Check-Git-Secrets') {
     stage ('SAST') {
       steps {
           sh ' mvn clean install sonar:sonar '
-          sh ' mvn sonar:sonar \ -Dsonar.projectKey=Bwaap \-Dsonar.host.url=http://172.29.87.55:9000 \ -Dsonar.login=0ebde377b6b5409ad9dfbad6c576a3486c5a9688'
           sh 'cat target/sonar/report-task.txt'
       }
     }
