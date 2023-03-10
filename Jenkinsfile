@@ -49,8 +49,7 @@ stage ('Check-Git-Secrets') {
     stage ('Build') {
       steps {
       sh 'mvn clean package'
-       sh 'whoami'
-       }
+      }
     }
     
     stage ('Deploy-To-Tomcat') {
