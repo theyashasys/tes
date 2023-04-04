@@ -41,7 +41,7 @@
         </plugins>
              <resources>
                   <resource>
-                     <directory>bWAPP</directory>
+                     <directory>Bwaap/bWAPP/</directory>
                   </resource>
              </resources>
     </build>
