@@ -25,10 +25,11 @@ stage ('Check-Git-Secrets') {
     steps {
          sh 'rm owasp* || true'
          dependencyCheck additionalArguments: '--format HTML', odcInstallation: 'owasp'
-         sh 'wget "https://raw.githubusercontent.com/cehkunal/webapp/master/owasp-dependency-check.sh" '
-         sh 'chmod -R 777 owasp-dependency-check.sh'
-         sh 'bash owasp-dependency-check.sh'
-         sh 'cat /var/lib/jenkins/OWASP-Dependency-Check/reports/dependency-check-report.xml'
+         sh ' mvn org.owasp:dependency-check-maven:check'
+        // sh 'wget "https://raw.githubusercontent.com/cehkunal/webapp/master/owasp-dependency-check.sh" '
+         //sh 'chmod -R 777 owasp-dependency-check.sh'
+         //sh 'bash owasp-dependency-check.sh'
+         //sh 'cat /var/lib/jenkins/OWASP-Dependency-Check/reports/dependency-check-report.xml'
         
       }
     }
@@ -48,7 +49,7 @@ stage ('Check-Git-Secrets') {
     
     stage ('Build') {
       steps {
-      sh 'mvn compile war:war -e -X'
+      sh 'mvn compile war:war '
      // sh 'mvn clean package'
       }
     }
