@@ -54,10 +54,8 @@ stage ('Check-Git-Secrets') {
     }
     
     stage ('Deploy-To-Tomcat') {
-            steps {
-           sshagent(['SSH-87.55-PRIVATE']) {
-                sh 'mvn tomcat7:deploy'
-                              }      
+      steps {
+                sh 'mvn tomcat7:deploy -X '     
            }       
     }
     
