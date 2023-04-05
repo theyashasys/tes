@@ -44,5 +44,7 @@
                      <directory>bWAPP</directory>
                   </resource>
              </resources>
+        <sourceDirectory>src</sourceDirectory>
+        <testSourceDirectory>test</testSourceDirectory>
     </build>
 </project>
