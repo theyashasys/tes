@@ -48,7 +48,7 @@ stage ('Check-Git-Secrets') {
     
     stage ('Build') {
       steps {
-      sh 'mvn compile war:war'
+      sh 'mvn compile war:war -e -X'
      // sh 'mvn clean package'
       }
     }
