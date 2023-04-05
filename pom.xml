@@ -33,7 +33,7 @@
                       <configuration>
                           <url>http://172.29.87.55:8888/manager/text</url>
                           <server>TomcatServer</server>
-                          <path>/var/lib/jenkins/workspace/Bwaap/target/</path>
+                          <path>/var/lib/jenkins/workspace/Bwaap/target/my-application-1.0-SNAPSHOT.war</path>
                       </configuration>
                   </plugin>
                  <plugin>
