@@ -49,7 +49,7 @@ stage ('Check-Git-Secrets') {
     stage ('Build') {
       steps {
       sh 'mvn compile'
-      sh 'mvn clean package'
+     // sh 'mvn clean package'
       }
     }
     
