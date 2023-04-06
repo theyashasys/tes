@@ -56,7 +56,7 @@ stage ('Check-Git-Secrets') {
     
     stage ('Deploy-To-Tomcat') {
       steps {
-                sh 'mvn tomcat7:run-war'     
+                sh 'mvn tomcat7:deploy '     
            }       
     }
     
