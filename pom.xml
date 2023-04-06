@@ -49,7 +49,7 @@
                       <version>1.2.0-0</version>
                       <configuration>
                            <zapPort>8080</zapPort>
-                           <targetUrl>http://localhost:8090/testwebapp</targetUrl>
+                           <targetUrl>http://172.29.87.55:8889/testwebapp</targetUrl>
                            <shouldRunWithDocker>true</shouldRunWithDocker>
                       </configuration>
                   </plugin>
