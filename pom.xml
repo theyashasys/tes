@@ -48,16 +48,10 @@
                       <artifactId>zap-maven-plugin</artifactId>
                       <version>1.2.0-0</version>
                       <configuration>
-                          <zapHost>172.29.87.55</zapHost>
-                          <zapPort>8889</zapPort>
-                          <targetUrl>http://172.29.87.55:8889/webapp</targetUrl>
+                           <zapPort>8080</zapPort>
+                           <targetUrl>http://localhost:8090/testwebapp</targetUrl>
+                           <shouldRunWithDocker>true</shouldRunWithDocker>
                       </configuration>
-                      <executions>
-                          <execution>
-                              <phase>verify</phase>
-                              <goals><goal>analyze</goal></goals>
-                          </execution>
-                      </executions>
                   </plugin>
                   <plugin>
                         <groupId>org.owasp</groupId>
