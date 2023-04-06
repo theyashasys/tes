@@ -61,13 +61,13 @@ stage ('Check-Git-Secrets') {
     }
     
     
- //   stage ('DAST') {
- //     steps {
- //       sshagent(['zap']) {
- //        sh 'ssh -P 8888 -o  StrictHostKeyChecking=no justdial@172.29.87.55 "docker run -t owasp/zap2docker-stable zap-baseline.py -t http://172.29.87.55:8888/webapp/" || true'
- //       }
- //     }
- //   }
-//    
-//  }
-//}
+    stage ('DAST') {
+      steps {
+        sshagent(['zap']) {
+         sh 'ssh -P 8888 -o  StrictHostKeyChecking=no justdial@172.29.87.55 "docker run -t owasp/zap2docker-stable zap-baseline.py -t http://172.29.87.55:8888/webapp/" || true'
+        }
+      }
+    }
+    
+  }
+}
