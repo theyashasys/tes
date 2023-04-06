@@ -48,7 +48,9 @@
                       <artifactId>zap-maven-plugin</artifactId>
                       <version>1.2.1</version>
                       <configuration>
-                     
+                          <zapHost>172.29.87.55</zapHost>
+                          <zapPort>8889</zapPort>
+                          <targetUrl>http://172.29.87.55:8889/webapp</targetUrl>
                       </configuration>
                       <executions>
                           <execution>
