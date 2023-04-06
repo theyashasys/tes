@@ -65,7 +65,7 @@ stage ('Check-Git-Secrets') {
       steps {
         sshagent(['zap']) {
           sh 'mvn br.com.softplan.security.zap:zap-maven-plugin:analyze'
-         sh 'ssh -P 8889 -o  StrictHostKeyChecking=no justdial@172.29.87.55 "docker run -t owasp/zap2docker-stable zap-baseline.py -t http://172.29.87.55:8889/webapp/" || true'
+         sh 'ssh -P 8889 -o  StrictHostKeyChecking=no justdial@172.29.87.55 "docker run -t owasp/zap2docker-stable zap-baseline.py -t http://172.29.87.55:8899/my-application/" || true'
         }
       }
     }
