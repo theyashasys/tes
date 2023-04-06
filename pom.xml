@@ -36,6 +36,8 @@
 			<url>http://172.28.87.55:8888/manager/text</url>
 			<server>TomcatServer</server>
 			<path>/my-application</path>
+		    	<username>admin</username>
+       			<password>admin</password>
              </configuration>
             </plugin>
                  <plugin>
