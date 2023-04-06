@@ -46,7 +46,7 @@
                  <plugin>
                       <groupId>br.com.softplan.security.zap</groupId>
                       <artifactId>zap-maven-plugin</artifactId>
-                      <version>1.2.1-0</version>
+                      <version>1.2.0-0</version>
                       <configuration>
                           <zapHost>172.29.87.55</zapHost>
                           <zapPort>8889</zapPort>
