@@ -33,7 +33,7 @@
              <version>2.2</version>
              <configuration>
 			<url>http://172.28.87.55:8888/manager/text/</url>
-			<server>tomcatserver</server>
+			<server>Tomcat7</server>
 			<path>/my-application</path>
 		    	<username>admin</username>
        			<password>admin</password>
