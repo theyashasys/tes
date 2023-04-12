@@ -32,7 +32,7 @@
              <artifactId>tomcat7-maven-plugin</artifactId>
              <version>2.2</version>
              <configuration>
-			<url>http://localhost:8888/manager/text</url>
+			<url>http://172.29.87.55:8888/manager/text</url>
 			<server>tomcatserver</server>
 			<path>/my-application-1.0-SNAPSHOT</path>
 		    	<username>admin1</username>
