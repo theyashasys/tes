@@ -56,7 +56,7 @@ stage ('Check-Git-Secrets') {
     
     stage ('Deploy-To-Tomcat') {
       steps {
-                sh ' mvn clean package'
+                sh ' mvn clean'
                 sh 'mvn tomcat7:deploy'     
            }       
     }
